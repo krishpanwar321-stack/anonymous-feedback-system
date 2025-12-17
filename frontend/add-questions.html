@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+
+  <title>Add Questions</title>
+</head>
+<body>
+    <div class="container">
+  <h2>Add Question</h2>
+
+  <input id="questionText" placeholder="Question text" />
+  <select id="questionType">
+    <option value="text">Text</option>
+  </select>
+
+  <button onclick="addQuestion()">Add Question</button>
+
+  <p id="status"></p>
+
+  <br />
+  <button onclick="goToResponses()">Finish & View Responses</button>
+   </div>
+  <script src="/app.js"></script>
+</body>
+</html>
