@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Profile</title>
+</head>
+<body>
+
+<div class="container">
+  <h2>Profile</h2>
+
+  <p><b>Name:</b> <span id="name"></span></p>
+  <p><b>Email:</b> <span id="email"></span></p>
+  <p><b>Username:</b> <span id="username"></span></p>
+
+  <button onclick="showChangePassword()">Change Password</button>
+
+  <div id="changePasswordBox" style="display:none;">
+    <input type="password" id="oldPassword" placeholder="Old password">
+    <input type="password" id="newPassword" placeholder="New password">
+    <input type="password" id="confirmPassword" placeholder="Confirm password">
+
+    <button onclick="changePassword()">Update Password</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
