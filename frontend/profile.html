@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="nav-logo" onclick="window.location.href='dashboard.html'">
+        Anonymous Feedback
+      </div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="nav-links" id="navLinks"></div>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="profile.html" class="active">Profile</a>
+        <a href="#" onclick="logout()">Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE CONTENT -->
+  <div class="page">
+    <div class="container">
+      <h2>Profile</h2>
+
+      <p><strong>Email:</strong> <span id="email"></span></p>
+
+      <label>Full Name</label>
+      <input id="name" />
+
+      <hr>
+
+      <h3>Change Password</h3>
+
+      <input
+        type="password"
+        id="oldPassword"
+        placeholder="Current password"
+      />
+
+      <input
+        type="password"
+        id="newPassword"
+        placeholder="New password"
+      />
+
+      <input
+        type="password"
+        id="confirmPassword"
+        placeholder="Confirm new password"
+      />
+
+      <button onclick="changePassword()">Change Password</button>
+      <p id="passwordStatus"></p>
+
+      <button onclick="updateProfile()">Save</button>
+      <p id="status"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
