@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Dashboard</title>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="navbar-inner">
+
+      <div class="nav-logo" onclick="window.location.href='dashboard.html'">
+        Anonymous Feedback
+      </div>
+
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" onclick="logout()">Logout</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="container dashboard-container">
+      <h2>Your Forms</h2>
+      <button onclick="goCreate()">Create New Form</button>
+      <ul id="forms"></ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
