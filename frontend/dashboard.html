@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Dashboard</title>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="navbar-inner">
+
+      <div class="nav-logo" onclick="window.location.href='dashboard.html'">
+        Anonymous Feedback
+      </div>
+
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" onclick="logout()">Logout</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="container dashboard-container">
+      <div class="dashboard-hero">
+        <div>
+          <h1>Your Feedback Forms</h1>
+          <p class="hero-subtitle">
+            Create anonymous feedback forms and collect honest responses in real time.
+          </p>
+        </div>
+      
+        <button class="hero-cta" onclick="goCreate()">
+          + Create New Form
+        </button>
+      </div>      
+      <div id="emptyState" class="empty-state" style="display:none;">
+        <div class="empty-illustration">📝</div>
+      
+        <h3>No feedback forms yet</h3>
+      
+        <p>
+          You haven’t created any feedback forms yet.  
+          Create your first form and start collecting honest responses.
+        </p>
+      
+        <button class="hero-cta" onclick="goCreate()">
+          + Create Your First Form
+        </button>
+      </div>      
+       <!-- PLAN + USAGE INFO -->
+        <div class="plan-badge" id="planBadge"></div>
+
+       <div class="usage-box">
+       <p id="formsUsed"></p>
+       <p id="formsLeft"></p>
+       <p id="planExpiry"></p>
+       </div>
+      <ul id="forms"></ul>
+    </div>
+  </div>
+  <div id="paymentSuccess" class="message success" style="display:none;">
+    🎉 Plan upgraded successfully!
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
