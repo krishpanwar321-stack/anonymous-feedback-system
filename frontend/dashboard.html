@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Dashboard</title>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="navbar-inner">
+
+      <div class="nav-logo" onclick="window.location.href='dashboard.html'">
+        Anonymous Feedback
+      </div>
+
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="billing.html">Billing</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" onclick="logout()">Logout</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="container dashboard-container">
+      <div class="dashboard-hero">
+        <div>
+          <h1>Your Feedback Forms</h1>
+          <p class="hero-subtitle">
+            Create anonymous feedback forms for student clubs and teams — no names, no tracking, no fear.
+          </p>          
+        </div>
+      
+        <button class="hero-cta" onclick="goCreate()">
+          + Create Anonymous Form (Free)
+        </button>        
+      </div>      
+      <div id="emptyState" class="empty-state" style="display:none;">
+        <div class="empty-illustration">📝</div>
+      
+        <h3>No feedback forms yet</h3>
+      
+        <p>
+          You haven’t created any feedback forms yet.  
+          Create your first form and start collecting honest responses.
+        </p>
+      
+        <button class="hero-cta" onclick="goCreate()">
+          + Create Anonymous Form (Free)
+        </button><div class="dashboard-hero">      
+          <div style="margin-top:12px; color:#666; font-size:14px;">
+            ✔ No login required for submissions<br>
+            ✔ No names or emails collected<br>
+            ✔ Responses are truly anonymous
+          </div>            
+      </div>      
+         <!-- PLAN + USAGE INFO -->
+         <div class="dashboard-stats">
+
+          <div class="plan-badge" id="planBadge"></div>
+
+          <div class="usage-box">
+         <p id="formsUsed"></p>
+         <p id="formsLeft"></p>
+         <p id="planExpiry"></p>
+         </div>
+
+         <button
+         id="upgradeBtn"
+         class="hero-cta"
+         style="display:none; margin-top:12px;"
+         onclick="window.location.href='pricing.html'">
+         🚀 Upgrade Plan
+         </button>
+
+         <p class="trust-text">
+         Upgrade anytime • No hidden charges • Secure payments
+         </p>
+
+        </div>
+
+      <ul id="forms"></ul>
+    </div>
+  </div>
+  <div id="paymentSuccess" class="message success" style="display:none;">
+    🎉 Plan upgraded successfully!
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
