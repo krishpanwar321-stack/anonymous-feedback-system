@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Questions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container" id="add-questions">
+
+    <h2>Add Question</h2>
+
+    <label>Question</label>
+    <input id="questionText" placeholder="Enter your question" />
+
+    <label>Question Type</label>
+    <select id="questionType" onchange="handleTypeChange()">
+      <option value="long_text">Long text</option>
+      <option value="short_text">Short text</option>
+      <option value="rating">Rating (1–10)</option>
+      <option value="single_choice">Choose one option</option>
+      <option value="multiple_choice">Choose many options</option>
+    </select>
+
+    <!-- OPTIONS (ONLY FOR CHOICE QUESTIONS) -->
+    <div id="optionsBox" style="display: none;">
+      <label>Options</label>
+
+      <div id="optionsList"></div>
+
+      <button type="button" class="secondary-btn" onclick="addOption()">
+        + Add option
+      </button>
+    </div>
+
+    <button onclick="addQuestion()">Add Question</button>
+
+    <p id="status"></p>
+
+    <hr />
+
+    <button class="secondary-btn" onclick="goToResponses()">
+      Finish & View Responses
+    </button>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
